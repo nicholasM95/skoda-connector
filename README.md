@@ -1,11 +1,9 @@
-# VW Group Connector
+# Škoda Connector
+This project provides a simple and efficient way to obtain access tokens and ID tokens specifically for Škoda applications within the Volkswagen Group ecosystem.
+Whether you're building tools, apps, or integrations for Škoda services, this connector streamlines the authentication and authorization process.
 
-This project provides a convenient solution for obtaining access tokens and id tokens for various applications within the Volkswagen Group ecosystem. 
-Whether you're developing software for Volkswagen, Audi, Skoda. 
-This connector simplifies the process of authentication and authorization.
-
-Please note that this connector is `unofficial` and not endorsed by the Volkswagen Group. 
-It is developed independently to assist developers in integrating their applications with VW Group services.
+Disclaimer: This connector is `unofficial` and not affiliated with or endorsed by Škoda Auto or the Volkswagen Group.
+It is independently developed to support developers in integrating with Škoda's online services.
 
 ## Adding Maven Repository and Dependency
 
@@ -15,8 +13,8 @@ Add the Maven Dependency to your `pom.xml`
 
 ```
 <dependency>
-    <groupId>be.nicholasmeyers.vwgroup-connector</groupId>
-    <artifactId>vwgroup-connector</artifactId>
+    <groupId>be.nicholasmeyers.skoda-connector</groupId>
+    <artifactId>skoda-connector</artifactId>
     <version>2.0.0</version>
 </dependency>
 ```
