@@ -5,7 +5,7 @@
 
     <groupId>be.nicholasmeyers.skoda-connector</groupId>
     <artifactId>skoda-connector</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.1.0</version>
 
     <name>skoda-connector</name>
     <description>skoda-connector</description>
