@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/nicholasM95/skoda-connector/compare/v1.0.1...v1.1.0) (2025-04-10)
+
+
+### Features
+
+* add version to README ([56993da](https://github.com/nicholasM95/skoda-connector/commit/56993da7fd6ef2808d4f0255759df4be87754759))
+
+
+### Bug Fixes
+
+* **deps:** update feign monorepo to v13.6 ([559e730](https://github.com/nicholasM95/skoda-connector/commit/559e730dd2a4fc05ef22aa9764ef7c447896faf2))
+
 ## [1.0.1](https://github.com/nicholasM95/skoda-connector/compare/v1.0.0...v1.0.1) (2025-04-10)
 
 # 1.0.0 (2025-04-10)
