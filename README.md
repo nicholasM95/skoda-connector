@@ -15,7 +15,7 @@ Add the Maven Dependency to your `pom.xml`
 <dependency>
     <groupId>be.nicholasmeyers.skoda-connector</groupId>
     <artifactId>skoda-connector</artifactId>
-    <version>2.0.0</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
