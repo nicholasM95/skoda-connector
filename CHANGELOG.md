@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/nicholasM95/skoda-connector/compare/v1.1.1...v1.1.2) (2025-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.openfeign:feign-httpclient to v13.6 ([67a58ba](https://github.com/nicholasM95/skoda-connector/commit/67a58bab747c37e65c0153597d53b971e48cc686))
+
 # [1.1.0](https://github.com/nicholasM95/skoda-connector/compare/v1.0.1...v1.1.0) (2025-04-10)
 
 
