@@ -17,7 +17,7 @@
         <feign-httpclient.version>13.6</feign-httpclient.version>
         <feign-form.version>3.8.0</feign-form.version>
         <jose4j.version>0.9.6</jose4j.version>
-        <junit-jupiter-api.version>5.13.0</junit-jupiter-api.version>
+        <junit-jupiter-api.version>5.13.2</junit-jupiter-api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
