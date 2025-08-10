@@ -35,7 +35,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.4.0
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v6.3.0
