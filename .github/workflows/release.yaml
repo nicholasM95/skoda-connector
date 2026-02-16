@@ -7,6 +7,10 @@ on:
       - main
       - develop
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
   JAVA_VERSION: '21'
