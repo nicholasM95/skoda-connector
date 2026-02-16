@@ -1,6 +1,5 @@
 package be.nicholasmeyers.skodaconnector.service;
 
-import be.nicholasmeyers.skodaconnector.resource.Client;
 import be.nicholasmeyers.skodaconnector.resource.Tokens;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,15 +19,7 @@ public class ConnectorServiceTest {
 
     @Test
     public void testConnect() {
-        Tokens tokens = connectorService.getTokens(Client.CONNECT, getEmail(), getPassword());
-        Assertions.assertNotNull(tokens.getAccessToken());
-        Assertions.assertNotNull(tokens.getIdToken());
-        Assertions.assertNotNull(tokens.getRefreshToken());
-    }
-
-    @Test
-    public void testVWG() {
-        Tokens tokens = connectorService.getTokens(Client.VWG, getEmail(), getPassword());
+        Tokens tokens = connectorService.getTokens(getEmail(), getPassword());
         Assertions.assertNotNull(tokens.getAccessToken());
         Assertions.assertNotNull(tokens.getIdToken());
         Assertions.assertNotNull(tokens.getRefreshToken());

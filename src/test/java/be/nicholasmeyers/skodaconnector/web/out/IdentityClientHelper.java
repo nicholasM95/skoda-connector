@@ -23,7 +23,7 @@ public class IdentityClientHelper {
     public StartAuthorization getStartAuthorization() {
         String redirectUri = "myskoda://redirect/login/";
         String scope = "openid profile address cars email birthdate badge mbb phone driversLicense nationalIdentifier dealers mileage profession vin";
-        String responseType = "code id_token";
+        String responseType = "code";
         return identityClient.getAuthorizationEndpoint(redirectUri, CLIENT, scope, responseType);
     }
 
