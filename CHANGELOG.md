@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/nicholasM95/skoda-connector/compare/v1.1.3...v1.1.4) (2026-02-16)
+
+
+### Bug Fixes
+
+* login with correct token_types ([d687b0c](https://github.com/nicholasM95/skoda-connector/commit/d687b0cf8f5646d5c273cce794489c5016b19754))
+
 ## [1.1.3](https://github.com/nicholasM95/skoda-connector/compare/v1.1.2...v1.1.3) (2026-02-16)
 
 
