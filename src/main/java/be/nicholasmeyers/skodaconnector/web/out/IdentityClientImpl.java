@@ -221,9 +221,6 @@ public class IdentityClientImpl implements IdentityService {
         String location = getLocationHeader(response.headers());
 
         String authCode = location.substring(location.indexOf("code") + 5);
-        authCode = authCode.substring(0, authCode.indexOf("&token_type"));
-
-        String idToken = location.substring(location.indexOf("id_token") + 9);
 
         return new TokenInfo(authCode, startAuthorization.getRedirectUrl(), startAuthorization.getCodeVerifier());
     }

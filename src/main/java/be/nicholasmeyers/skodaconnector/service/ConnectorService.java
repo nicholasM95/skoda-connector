@@ -3,7 +3,6 @@ package be.nicholasmeyers.skodaconnector.service;
 import be.nicholasmeyers.skodaconnector.resource.*;
 import be.nicholasmeyers.skodaconnector.web.out.IdentityClientImpl;
 import be.nicholasmeyers.skodaconnector.web.out.TokenClientImpl;
-import be.nicholasmeyers.skodaconnector.web.out.VWGClientImpl;
 import org.jose4j.jwt.MalformedClaimException;
 import org.jose4j.jwt.NumericDate;
 import org.jose4j.jwt.consumer.InvalidJwtException;
@@ -23,20 +22,18 @@ public class ConnectorService {
 
     private final IdentityService identityService;
     private final TokenService tokenService;
-    private final VWGService vwgService;
-    private final Map<Client, Tokens> cache;
+    private final Map<String, Tokens> cache;
 
     public ConnectorService() {
         this.identityService = new IdentityClientImpl();
         this.tokenService = new TokenClientImpl();
-        this.vwgService = new VWGClientImpl();
         this.cache = new HashMap<>();
     }
 
-    public Tokens getTokens(Client client, String email, String password) {
-        if (cache.containsKey(client) && areTokensFromCacheOk(cache.get(client))) {
+    public Tokens getTokens(String email, String password) {
+        if (cache.containsKey(email) && areTokensFromCacheOk(cache.get(email))) {
             log.info("Get tokens from cache.");
-            return cache.get(client);
+            return cache.get(email);
         }
         log.info("Get new tokens from vw group.");
         Map<String, String> clientConfig = getClientConfig();
@@ -54,16 +51,9 @@ public class ConnectorService {
         SuccessInfo successInfo = identityService.checkConsent(clientId, startAuthorization, authorizationInfo, consentInfo, scope, ssoLogin.getUser());
         TokenInfo tokenInfo = identityService.handleSuccess(clientId, startAuthorization, authorizationInfo, successInfo, scope, ssoLogin.getUser());
 
-        if (Client.VWG.equals(client)) {
-            String idToken = tokenService.getTokens(tokenInfo).getIdToken();
-            Tokens tokens = new Tokens(vwgService.getAccessToken(idToken), idToken, "");
-            cache.put(client, tokens);
-            return tokens;
-        } else {
-            Tokens tokens = tokenService.getTokens(tokenInfo);
-            cache.put(client, tokens);
-            return tokens;
-        }
+        Tokens tokens = tokenService.getTokens(tokenInfo);
+        cache.put(email, tokens);
+        return tokens;
     }
 
     private boolean areTokensFromCacheOk(Tokens tokens) {
