@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/nicholasM95/skoda-connector/compare/v1.1.2...v1.1.3) (2026-02-16)
+
+
+### Bug Fixes
+
+* **deps:** update feign monorepo to v13.8 ([3435fe2](https://github.com/nicholasM95/skoda-connector/commit/3435fe2c6e639b72abc72934fbf25fc40965c93b))
+
 ## [1.1.2](https://github.com/nicholasM95/skoda-connector/compare/v1.1.1...v1.1.2) (2025-05-08)
 
 
